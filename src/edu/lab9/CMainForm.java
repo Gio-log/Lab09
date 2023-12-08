@@ -1,6 +1,6 @@
 package edu.lab9;
 
-import edu.shapes.CShapeCircle;
+import edu.shapes.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,6 +45,14 @@ public class CMainForm extends javax.swing.JFrame{
         document = new CDocument((CGraphicArea)graphicsArea);
         document.addShape(new CShapeCircle(200,200, Color.BLUE, Color.BLACK,70));
         document.addShape(new CShapeCircle(600,300,Color.DARK_GRAY,Color.BLACK,90));
+        document.addShape(new CPolyRTriangle(500,600, Color.GRAY, Color.black, 200,150));
+        document.addShape(new CPolyRectangle(800,400, Color.lightGray, Color.black, 250,100));
+        document.addShape(new CPolyLShape(300,400, Color.lightGray, Color.black, 250,300,30));
+        document.addShape(new CPolyZ(300, 500, Color.RED, Color.CYAN, 100, 200, 30));
+        document.addShape(new CPolyC(800, 550, Color.ORANGE, Color.MAGENTA, 100, 200, 30));
+        document.addShape(new CPolyT(900, 450, Color.MAGENTA, Color.CYAN, 150, 200, 30));
+        document.addShape(new CPolyDoubleT(900, 10, Color.BLUE, Color.RED, 150, 200, 30));
+        document.addShape(new CPolySquarePipe(200, 300, Color.GREEN, Color.GREEN, 150, 200, 30));
         document.redraw();
     }
     private void graphicAreaMousePressed(MouseEvent evt){
